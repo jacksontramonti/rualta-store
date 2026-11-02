@@ -1,0 +1,4 @@
+export default function ProductOptions({options=[],shape='square',type='text',radius='8px',value,onChange}){return <div className={`product-options product-options--${shape}`}>{options.map((option)=>{
+ const val=typeof option==='object' ? option.value : option;const label=typeof option==='object'?option.label:option;const active=value===val;
+ return <button type="button" key={String(val)} onClick={()=>onChange?.(val)} aria-label={type==='color'?`Selecionar cor ${label}`:`Selecionar tamanho ${label}`} aria-pressed={active} title={String(label)} className={`option-button ${active?'option-button--active':''} ${type==='color'?'color-option':''}`} style={{borderRadius:shape==='circle'?'50%':radius,...(type==='color'?{backgroundColor:val}:{})}}>{type==='color'?<span className="sr-only">{label}</span>:label}</button>;
+ })}</div>;}

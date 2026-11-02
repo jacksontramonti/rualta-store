@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-label="Ilustração autoral do tênis Flux Runner"><defs>
+<linearGradient id="upper" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#F4C4A8" offset="0"/><stop stop-color="#F26F46" offset="0.85"/></linearGradient>
+<linearGradient id="mid" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#FFFFFF" offset="0"/><stop stop-color="#CFD4DB" offset="1"/></linearGradient>
+<linearGradient id="tongue" x1="0" x2="1"><stop stop-color="#F26F46"/><stop stop-color="#F4C4A8" offset="1"/></linearGradient>
+<filter id="shade" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="16"/></filter></defs>
+<ellipse cx="388" cy="419" rx="256" ry="23" fill="#14213A" opacity=".15" filter="url(#shade)"/>
+<circle cx="393" cy="261" r="181" fill="#F4C4A8" opacity=".15"/>
+<g transform="translate(15 -9) rotate(4 390 295)">
+<path d="M106 296 C141 285 180 242 211 210 C245 177 287 161 321 181 C358 202 412 230 469 247 C515 256 569 259 602 277 L670 316 Q702 333 678 360 C657 383 574 388 513 391 L181 391 C130 389 91 369 88 341 C87 321 95 306 106 296Z" fill="url(#upper)" stroke="#F26F46" stroke-width="5"/>
+<path d="M130 310 C185 298 204 252 229 215 C250 191 279 182 309 191 L335 211 C293 209 274 239 264 270 L239 338 L116 343 Z" fill="#F26F46" opacity=".65"/>
+<path d="M308 186 Q343 197 377 226 L447 251 Q402 249 364 283 L304 277 L282 235Z" fill="url(#tongue)" stroke="#F26F46" stroke-width="4"/>
+<path d="M359 241 C412 244 450 267 501 268 Q542 265 574 276 L619 306 C565 314 511 332 453 332 C406 329 361 309 320 285Z" fill="#F4C4A8" opacity=".76"/>
+<path d="M378 260 L446 282 L480 277 L431 302 L359 283Z" fill="#392E3B"/>
+<path d="M397 302 L476 320 L514 311 L455 335 L387 321Z" fill="#392E3B" opacity=".85"/>
+<path d="M596 287 Q644 304 667 325 L672 342 Q620 339 589 327Z" fill="#F26F46" opacity=".45"/>
+<path d="M129 332 Q150 338 191 338 L503 342 Q614 333 674 346 L687 361 Q683 378 648 388 C584 403 466 405 361 406 L175 403 Q107 400 91 371 L89 351Z" fill="url(#mid)" stroke="#AAB1BD" stroke-width="4"/>
+<path d="M100 374 Q146 401 201 395 L518 395 Q610 398 665 375" fill="none" stroke="#D1D7DD" stroke-width="11" stroke-linecap="round"/>
+<path d="M100 384 C157 419 238 416 381 416 Q597 419 674 384" fill="none" stroke="#F26F46" stroke-width="12" stroke-linecap="round"/>
+<path d="M117 349 Q139 357 171 356 M566 356 Q615 357 652 349" stroke="#9DA5AF" stroke-width="5" stroke-linecap="round" fill="none"/>
+<path d="M278 221 L361 248 M267 236 L349 264 M258 252 L340 279 M248 268 L328 296" stroke="#FDFDF9" stroke-width="10" stroke-linecap="round"/>
+<path d="M278 220 L361 247 M269 237 L348 264 M257 253 L338 278 M248 269 L327 296" stroke="#392E3B" stroke-width="3" stroke-linecap="round"/>
+<path d="M201 268 Q233 234 249 220 M219 317 Q236 313 255 310" stroke="#FFFFFF" stroke-opacity=".45" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M126 329 Q178 337 211 321 M531 282 Q562 284 587 301" stroke="#151923" opacity=".2" stroke-width="5" fill="none"/>
+<circle cx="296" cy="218" r="5" fill="#392E3B"/><circle cx="285" cy="231" r="5" fill="#392E3B"/><circle cx="274" cy="248" r="5" fill="#392E3B"/>
+</g></svg>

@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {existsSync,readFileSync} from 'node:fs';import {products} from '../src/data/products.js';
+test('todas as ilustrações SVG do catálogo estão presentes',()=>{for(const p of products)for(const image of p.images){assert.ok(existsSync(`public${image.src}`),`faltou ${image.src}`);assert.match(readFileSync(`public${image.src}`,'utf8'),/<svg /);}});

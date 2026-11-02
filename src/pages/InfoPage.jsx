@@ -1,0 +1,2 @@
+import { ArrowLeft,MoveUpRight } from 'lucide-react';import { Link } from 'react-router-dom';
+export default function InfoPage({title,description}){return <div className="info-page"><div className="container"><div className="info-panel"><span className="eyebrow">RUALTA / EM CONSTRUÇÃO</span><div className="info-icon"><MoveUpRight size={34}/></div><h1>{title}<span>.</span></h1><p>{description}</p><Link to="/products" className="primary-button"><ArrowLeft size={18}/> Voltar aos tênis</Link></div></div></div>;}

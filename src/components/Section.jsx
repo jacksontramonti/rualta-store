@@ -1,0 +1,2 @@
+import { ArrowUpRight } from 'lucide-react';import { Link } from 'react-router-dom';
+export default function Section({title,eyebrow,description,titleAlign='left',link,children,id}){return <section className={`shop-section section-${titleAlign}`} id={id}><div className="container"><div className="section-heading"><div>{eyebrow&&<span className="eyebrow">{eyebrow}</span>}<h2>{title}</h2>{description&&<p>{description}</p>}</div>{link&&<Link className="text-link" to={link.href}>{link.text}<ArrowUpRight size={19}/></Link>}</div>{children}</div></section>;}

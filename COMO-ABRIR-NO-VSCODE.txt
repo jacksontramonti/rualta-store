@@ -1,0 +1,24 @@
+RUALTA STORE | GUIA RAPIDO
+========================
+
+1) DESCOMPACTAR O ZIP EM UMA PASTA NO SEU COMPUTADOR.
+2) ABRIR O VISUAL STUDIO CODE.
+3) CLICAR EM ARQUIVO > ABRIR PASTA E ESCOLHER "rualta-store".
+4) ABRIR TERMINAL > NOVO TERMINAL.
+5) DIGITAR:
+
+   npm install
+   npm run dev
+
+6) ABRIR NO NAVEGADOR O ENDERECO INDICADO PELO TERMINAL
+   (NORMALMENTE http://localhost:5173).
+
+SE APARECER "npm NAO E RECONHECIDO":
+Instale o Node.js (versao 20.19 ou mais nova) e reabra o VS Code.
+
+PARA PUBLICAR NO GITHUB:
+Use as instrucoes completas do README.md.
+
+IMPORTANTE:
+O projeto e uma demonstracao de Front-end. Nao possui pagamentos,
+login real nem banco de dados.
