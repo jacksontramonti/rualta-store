@@ -10,7 +10,7 @@ export default function Header(){
  useEffect(()=>{setMenuOpen(false);setSearch(new URLSearchParams(location.search).get('filter')||'');},[location.pathname,location.search]);
  function submit(e){e.preventDefault();const q=search.trim();navigate(q?`/products?filter=${encodeURIComponent(q)}`:'/products');}
  return <>
-  <div className="announcement"><span className="announcement-spark">✳</span> FRETE GRÁTIS A PARTIR DE R$ 299 <span className="announcement-separator">/</span> NOVA COLEÇÃO DISPONÍVEL</div>
+  <div className="announcement"><span className="announcement-spark">✳</span> NOVA SPORT · ESTILO EM MOVIMENTO <span className="announcement-separator">/</span> NOVA COLEÇÃO DISPONÍVEL</div>
   <header className="site-header"><div className="container header-inner">
    <Logo/>
    <form onSubmit={submit} className="header-search" role="search"><input type="search" placeholder="Qual é o seu próximo passo?" aria-label="Buscar tênis" value={search} onChange={e=>setSearch(e.target.value)}/><button type="submit" aria-label="Buscar"><Search size={20}/></button></form>
