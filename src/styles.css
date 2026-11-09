@@ -48,3 +48,8 @@
 .about-page p{max-width:690px;line-height:1.8;color:#526376;font-size:16px}
 .about-note{display:flex;gap:14px;align-items:center;margin:27px 0;background:#f0f4f8;border-radius:12px;padding:20px;color:var(--ink);font-size:14px}
 @media(max-width:560px){.about-page{padding-top:55px;padding-bottom:80px}.about-page p{font-size:14px}}
+
+/* Fotografias de tênis cedidas no material didático */
+.product-image-link img{max-width:100%;width:100%;object-fit:contain;filter:none}
+.gallery-picture{object-fit:contain}
+.collection-tile>img{object-fit:contain;max-width:100%}

@@ -4,10 +4,10 @@ Loja conceito de calçados esportivos desenvolvida em **React 18 + Vite 6**, com
 
 ## Funcionalidades
 
-- Home com destaque principal, três coleções e oito produtos em alta.
+- Home com destaque principal, três coleções e oito produtos em alta, usando fotos do material didático.
 - Catálogo com 12 modelos fictícios e pesquisa por nome (rota `/products?filter=termo`).
 - Listagem com barra lateral de aproximadamente 308 px no desktop, filtros por categoria e perfil, limite de preço e ordenação.
-- Visualização detalhada com galeria de três imagens, miniaturas de 117 × 95 px no desktop, cores, tamanhos e produtos relacionados.
+- Visualização detalhada com galeria de duas fotografias ilustrativas, miniaturas de 117 × 95 px no desktop, cores, tamanhos e produtos relacionados.
 - Carrinho demonstrativo com quantidade, subtotal e armazenamento no navegador (`localStorage`).
 - Favoritos, página de coleções, página Sobre e layout responsivo.
 - Páginas de cadastro e pedidos ilustrativas, sem autenticação ou transações reais.
@@ -59,11 +59,12 @@ Para publicar na Vercel, importe esse repositório, defina `npm run build` como 
 - `src/data/products.js` — catálogo fictício de 12 produtos.
 - `src/context/ShopContext.jsx` — estado e persistência do carrinho/favoritos.
 - `src/styles.css` — sistema visual responsivo azul-marinho e verde-lima.
-- `public/shoes/` — 36 ilustrações SVG de tênis do catálogo.
+- `public/course-images/` — fotos de tênis, coleções e banners disponibilizados pelo [repositório oficial do curso](https://github.com/digitalcollegebr/projeto-digital-store). Cinco pares de fotografias são reutilizados nos 12 registros fictícios, sem representar necessariamente os modelos/cores anunciados.
+- `public/shoes/` — ilustrações SVG anteriores preservadas como backup.
 - `tests/` — verificações automatizadas do catálogo, dos recursos e da marca.
 
 ## Identidade e escopo
 
-A NOVA SPORT é uma interpretação original de um exercício de Front-end com três páginas essenciais: Home, listagem e detalhes. Foram aproximadas as proporções e a organização de conteúdo descritas no escopo (banner 1440 × 681 px de referência, três coleções, oito produtos, filtros laterais e galeria com miniaturas), mantendo cores, marca, textos e imagens próprios. Não representa reprodução pixel a pixel do Figma; a correspondência final precisa ser avaliada visualmente.
+A NOVA SPORT é uma interpretação original de um exercício de Front-end com três páginas essenciais: Home, listagem e detalhes. Foram aproximadas as proporções e a organização de conteúdo descritas no escopo (banner 1440 × 681 px de referência, três coleções, oito produtos, filtros laterais e galeria com miniaturas), mantendo cores, marca e textos próprios. As fotografias são do acervo do curso, conforme solicitado. Não representa reprodução pixel a pixel do Figma; a correspondência final precisa ser avaliada visualmente.
 
 **Projeto:** NOVA SPORT · **Repositório:** [jacksontramonti/rualta-store](https://github.com/jacksontramonti/rualta-store) · **Autor no GitHub:** [@jacksontramonti](https://github.com/jacksontramonti)
