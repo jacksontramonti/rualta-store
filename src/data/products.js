@@ -1,4 +1,4 @@
-// Catálogo fictício exclusivo desta demonstração. Sem estoque ou pagamentos reais.
+// Catálogo de demonstração; fotos ilustrativas fornecidas pelo repositório do curso. Sem estoque nem pagamentos reais.
 const raw = [
   ['loop','Loop 01','Urbano','Todos',389.9,299.9,'#E5F2F8','#A8D8E8','#19385C','#4B7BF7'],
   ['flux','Flux Runner','Corrida','Masculino',459.9,379.9,'#FFF0E8','#F4C4A8','#F26F46','#392E3B'],
@@ -13,11 +13,12 @@ const raw = [
   ['terra','Terra Walk','Aventura','Todos',419.9,359.9,'#F0F4EC','#DAE2CF','#5D765A','#EBAE6F'],
   ['noir','Noir Motion','Casual','Masculino',399.9,319.9,'#E9EBF0','#C0C4CC','#282E40','#9DAEF2']
 ];
+const photoNumber = (index) => (index % 5) + 1;
 export const products = raw.map(([id,model,category,gender,price,priceDiscount,bg,light,dark,accent], index) => ({
   id,
-  name: `Rualta ${model}`,
+  name: `Nova Sport ${model}`,
   model,
-  brand: 'RUALTA',
+  brand: 'NOVA SPORT',
   category,
   gender,
   price,
@@ -27,8 +28,11 @@ export const products = raw.map(([id,model,category,gender,price,priceDiscount,b
   newArrival: [0,1,3,7,9].includes(index),
   isPopular: index < 5,
   reference: `RA-${String(index+1).padStart(4,'0')}`,
-  image: `/shoes/${id}-1.svg`,
-  images: [1,2,3].map(n=>({ src:`/shoes/${id}-${n}.svg`, alt:`Rualta ${model}: vista ${n}` })),
+  image: `/course-images/product-thumb-${photoNumber(index)}.jpeg`,
+  images: [
+    { src: `/course-images/produc-image-${photoNumber(index)}.jpeg`, alt: `Foto ilustrativa do tênis ${model}` },
+    { src: `/course-images/product-thumb-${photoNumber(index)}.jpeg`, alt: `Miniatura do tênis ${model}` }
+  ],
   bg, light, dark, accent,
   colors: [dark,accent,'#F4F5F7'],
   sizes: [35,36,37,38,39,40,41,42,43,44],

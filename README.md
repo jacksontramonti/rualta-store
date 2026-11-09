@@ -1,36 +1,31 @@
-# RUALTA — Seu ritmo, sua rua
+# NOVA SPORT — Movimento sem limites
 
-**Loja conceito de sneakers** desenvolvida com React e Vite. Marca, interface, textos, catálogo fictício, paleta e ilustrações SVG criados especificamente para este projeto de estudo.
+Loja conceito de calçados esportivos desenvolvida em **React 18 + Vite 6**, com marca, textos e catálogo fictício próprios.
 
-## O que o aplicativo oferece
+## Funcionalidades
 
-- Página inicial com vitrine, carrossel e três coleções.
-- Página independente de coleções por estilo.
-- Catálogo com **12 modelos fictícios**, busca por texto, filtros de categoria e perfil, limite de preço e ordenação.
-- Página de detalhes com galeria, escolha de tamanho e de cor, avaliações ilustrativas e produtos relacionados.
-- Carrinho de compras demonstrativo com ajuste de quantidades, subtotal e armazenamento local.
-- Favoritos que permanecem salvos no navegador.
-- Layout adaptável a celulares, tablets e computadores.
-- Páginas informativas para conta, cadastro e pedidos (sem backend).
+- Home com destaque principal, três coleções e oito produtos em alta, usando fotos do material didático.
+- Catálogo com 12 modelos fictícios e pesquisa por nome (rota `/products?filter=termo`).
+- Listagem com barra lateral de aproximadamente 308 px no desktop, filtros por categoria e perfil, limite de preço e ordenação.
+- Visualização detalhada com galeria de duas fotografias ilustrativas, miniaturas de 117 × 95 px no desktop, cores, tamanhos e produtos relacionados.
+- Carrinho demonstrativo com quantidade, subtotal e armazenamento no navegador (`localStorage`).
+- Favoritos, página de coleções, página Sobre e layout responsivo.
+- Páginas de cadastro e pedidos ilustrativas, sem autenticação ou transações reais.
 
-> **Aviso:** projeto exclusivamente de Front-end. O catálogo e os preços são fictícios; não há transações, estoque, pagamentos, criação de contas, newsletter enviada ou pedidos reais. O carrinho e os favoritos usam `localStorage`.
+> **Projeto educacional:** os produtos, preços, frete e avaliações são simulações. Este site não realiza pagamentos, entregas, autenticação, envio de newsletter ou emissão de pedidos.
 
-## Executar no Visual Studio Code
+## Abrir no Visual Studio Code
 
-**Pré-requisitos:** Node.js versão 20.19 ou superior e npm.
-
-1. Descompacte esta pasta e abra-a no Visual Studio Code em **Arquivo → Abrir Pasta**.
-2. Abra o terminal integrado (`Ctrl + J` ou **Terminal → Novo Terminal**).
-3. Execute:
+Requisitos: **Node.js 20.19+** e npm. No terminal, dentro da pasta do projeto:
 
 ```bash
 npm install
 npm run dev
 ```
 
-4. Abra o endereço indicado no terminal, geralmente **http://localhost:5173**.
+Abra a URL `http://localhost:5173/` exibida no terminal.
 
-## Testes e compilação
+## Testar e compilar
 
 ```bash
 npm test
@@ -38,71 +33,38 @@ npm run build
 npm run preview
 ```
 
-A pasta `dist/` é gerada pelo build, mas não vai para o GitHub por estar no `.gitignore`.
+O build gera a pasta `dist/`. O GitHub Actions executa testes e build a cada push ou pull request na branch principal.
 
-## Publicar no GitHub
+## GitHub e publicação
 
-Crie um **repositório vazio e público** no GitHub com o nome `rualta-store`, sem inicializar com README, e execute no terminal da pasta do projeto:
+Repositório existente: https://github.com/jacksontramonti/rualta-store
+
+O endereço do repositório permanece **rualta-store** para preservar os links anteriores; o nome de apresentação da loja e do pacote é **NOVA SPORT**. A branch `main` contém a versão pública; as melhorias de design podem ser revisadas em uma pull request antes de integrar.
+
+Para baixar a versão mais recente no VS Code:
 
 ```bash
-git init
-git add .
-git commit -m "feat: aplicação RUALTA React"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/rualta-store.git
-git push -u origin main
+git clone https://github.com/jacksontramonti/rualta-store.git
+cd rualta-store
+npm install
+npm run dev
 ```
 
-Substitua `SEU_USUARIO` pelo nome do seu perfil do GitHub. O GitHub pode solicitar autenticação. Se você já iniciou um repositório ou usa um fork, adapte o remoto para não sobrescrever trabalho existente.
+Para publicar na Vercel, importe esse repositório, defina `npm run build` como build e `dist` como diretório de saída. O arquivo `vercel.json` contém a regra de fallback para as rotas do React.
 
-### Publicação opcional na Vercel
+## Organização
 
-1. Acesse [vercel.com](https://vercel.com/) e conecte seu GitHub.
-2. Importe o repositório `rualta-store`.
-3. Vite é detectado automaticamente: build `npm run build`, pasta de saída `dist`.
-4. O arquivo `vercel.json` já permite acessar rotas React diretamente.
+- `src/components/` — elementos compartilhados (cabeçalho, busca, galeria, produtos, opções, carrinho, rodapé).
+- `src/pages/` — Home, listagem, detalhes, favoritos, coleções, Sobre e páginas auxiliares.
+- `src/data/products.js` — catálogo fictício de 12 produtos.
+- `src/context/ShopContext.jsx` — estado e persistência do carrinho/favoritos.
+- `src/styles.css` — sistema visual responsivo azul-marinho e verde-lima.
+- `public/course-images/` — fotos de tênis, coleções e banners disponibilizados pelo [repositório oficial do curso](https://github.com/digitalcollegebr/projeto-digital-store). Cinco pares de fotografias são reutilizados nos 12 registros fictícios, sem representar necessariamente os modelos/cores anunciados.
+- `public/shoes/` — ilustrações SVG anteriores preservadas como backup.
+- `tests/` — verificações automatizadas do catálogo, dos recursos e da marca.
 
-## Tecnologias
+## Identidade e escopo
 
-React 18 · React Router DOM 6 · Vite 6 · CSS puro · Lucide Icons · SVG autoral · JavaScript moderno.
+A NOVA SPORT é uma interpretação original de um exercício de Front-end com três páginas essenciais: Home, listagem e detalhes. Foram aproximadas as proporções e a organização de conteúdo descritas no escopo (banner 1440 × 681 px de referência, três coleções, oito produtos, filtros laterais e galeria com miniaturas), mantendo cores, marca e textos próprios. As fotografias são do acervo do curso, conforme solicitado. Não representa reprodução pixel a pixel do Figma; a correspondência final precisa ser avaliada visualmente.
 
-## Arquitetura
-
-```
-src/
-  assets/           Logo original em SVG
-  components/       Cabeçalho, rodapé, cards, filtros, galeria, compra e carrinho
-  context/          Estado de carrinho/favoritos
-  data/             Catálogo fictício
-  pages/            Início, listagem, detalhes, favoritos e páginas informativas
-  utils/            Formatação de preços e filtros
-  App.jsx           Rotas
-  main.jsx          Inicialização do React
-  styles.css        Identidade visual responsiva
-public/shoes/        36 ilustrações de tênis em SVG
-```
-
-## Rotas
-
-| URL | Conteúdo |
-|---|---|
-| `/` | Página inicial |
-| `/products` | Catálogo |
-| `/products?filter=nome` | Pesquisa por palavra |
-| `/products?category=Corrida` | Categoria selecionada |
-| `/product/loop` | Detalhes do modelo Loop 01 |
-| `/categories` | Coleções |
-| `/favorites` | Favoritos |
-| `/orders` | Página informativa |
-
-## Sobre o projeto
-
-Esta é uma **interpretação visual e técnica original de um exercício de Front-end em React** com requisitos de home, listagem e detalhes. Não utiliza logomarcas, imagens, código ou nomes da loja de referência. A interface foi reimaginada do zero para demonstrar componentização, estado React, navegação e UX de e-commerce.
-
-**Participantes:** preencha seu nome e, se houver, os nomes dos integrantes antes de apresentar.
-
-**Autor(a):** [SEU NOME AQUI]
-
-**Link do repositório:** [ADICIONAR APÓS PUBLICAR]
-
-**Link do site:** [ADICIONAR APÓS DEPLOY]
+**Projeto:** NOVA SPORT · **Repositório:** [jacksontramonti/rualta-store](https://github.com/jacksontramonti/rualta-store) · **Autor no GitHub:** [@jacksontramonti](https://github.com/jacksontramonti)

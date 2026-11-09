@@ -5,7 +5,7 @@ export default function BuyBox({product,name,reference,stars,rating,price,priceD
  const p=product||{name,reference,rating:stars,reviews:rating,price,priceDiscount,description,sizes:[36,37,38,39,40,41,42,43],colors:['#162438','#C9F564']};
  const [size,setSize]=useState(null);const [color,setColor]=useState(p.colors[0]);const [message,setMessage]=useState('');const {addToCart}=useShop();
  function buy(){if(!size){setMessage('Selecione um tamanho antes de continuar.');return;}setMessage('');addToCart(p,{size,color});}
- return <div className="buy-box"><span className="eyebrow">RUALTA / {p.category||'EDIÇÃO ESPECIAL'}</span><h1>{p.name}</h1><div className="product-ref">REF. {p.reference} <span>·</span> ORIGINAL RUALTA</div>
+ return <div className="buy-box"><span className="eyebrow">NOVA SPORT / {p.category||'EDIÇÃO ESPECIAL'}</span><h1>{p.name}</h1><div className="product-ref">REF. {p.reference} <span>·</span> ORIGINAL NOVA SPORT</div>
  <div className="rating"><span className="rating-stars"><Star size={17} fill="currentColor"/> {p.rating}</span><span>{p.reviews} avaliações na loja conceito</span></div>
  <div className="buy-prices"><strong>{formatPrice(salePrice(p))}</strong>{p.priceDiscount&&<del>{formatPrice(p.price)}</del>}</div><p className="buy-description">{p.description}</p>
  <div className="purchase-options"><div className="purchase-option-heading"><strong>Escolha o tamanho</strong><span>Guia BR</span></div><ProductOptions options={p.sizes} value={size} onChange={v=>{setSize(v);setMessage('');}}/>

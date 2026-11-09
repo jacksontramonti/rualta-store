@@ -1,1 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#111D32"/><path fill="#C9F564" d="M12 17 27 9l13 16-11 8-7-8-3 23H10zM37 41 49 27l8 8-10 13-11-5z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Nova Sport"><rect width="64" height="64" rx="16" fill="#111D32"/><path d="M13 45V18h8l14 17V18h8v27h-8L21 28v17z" fill="#C9F564"/><path d="M46 20h7M46 28h7M46 36h7" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
