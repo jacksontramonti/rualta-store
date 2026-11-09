@@ -2,8 +2,8 @@ import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { getProductById } from '../data/products.js';
 import { salePrice } from '../utils/catalog.js';
 const ShopContext = createContext(null);
-const CART_KEY='rualta-cart-v1';
-const FAVORITES_KEY='rualta-favorites-v1';
+const CART_KEY='nova-sport-cart-v1';
+const FAVORITES_KEY='nova-sport-favorites-v1';
 function read(key,fallback){try{const value=JSON.parse(localStorage.getItem(key));return Array.isArray(value)?value:fallback;}catch{return fallback;}}
 export function ShopProvider({children}){
   const [cart,setCart]=useState(()=>read(CART_KEY,[]));

@@ -1,9 +1,9 @@
 {
-  "name": "rualta-store",
+  "name": "nova-sport",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "RUALTA - loja conceito de sneakers, React + Vite",
+  "description": "NOVA SPORT — loja conceito esportiva em React + Vite",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
@@ -20,5 +20,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^6.0.5"
   },
-  "engines": { "node": ">=20.19.0" }
+  "engines": {
+    "node": ">=20.19.0"
+  }
 }

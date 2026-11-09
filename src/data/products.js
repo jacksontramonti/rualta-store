@@ -15,9 +15,9 @@ const raw = [
 ];
 export const products = raw.map(([id,model,category,gender,price,priceDiscount,bg,light,dark,accent], index) => ({
   id,
-  name: `Rualta ${model}`,
+  name: `Nova Sport ${model}`,
   model,
-  brand: 'RUALTA',
+  brand: 'NOVA SPORT',
   category,
   gender,
   price,
@@ -28,7 +28,7 @@ export const products = raw.map(([id,model,category,gender,price,priceDiscount,b
   isPopular: index < 5,
   reference: `RA-${String(index+1).padStart(4,'0')}`,
   image: `/shoes/${id}-1.svg`,
-  images: [1,2,3].map(n=>({ src:`/shoes/${id}-${n}.svg`, alt:`Rualta ${model}: vista ${n}` })),
+  images: [1,2,3].map(n=>({ src:`/shoes/${id}-${n}.svg`, alt:`Nova Sport ${model}: vista ${n}` })),
   bg, light, dark, accent,
   colors: [dark,accent,'#F4F5F7'],
   sizes: [35,36,37,38,39,40,41,42,43,44],
