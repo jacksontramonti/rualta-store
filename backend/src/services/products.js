@@ -26,6 +26,11 @@ function serialize(row) {
   };
 }
 
+// Usa a mesma ordenação de caracteres da migration. O literal contém
+// apenas hexadecimais derivados dos bytes UTF-8, nunca texto SQL do usuário.
+const sqlUtf8 = (input) => 'CONVERT(0x' + Buffer.from(input, 'utf8').toString('hex') +
+  ' USING utf8mb4) COLLATE utf8mb4_unicode_ci';
+
 async function search(query) {
   const { limit, page, fields: projection } = v.pagination(query, fields);
   const clauses = [];
@@ -33,7 +38,7 @@ async function search(query) {
     const word = v.text(query.match, 'match', 100);
     // LOCATE procura o texto literalmente, sem tratar % e _ como curingas.
     clauses.push({ [Op.or]: ['name', 'description'].map((field) =>
-      db.where(db.fn('LOCATE', word, db.col('Product.' + field)), { [Op.gt]: 0 })) });
+      db.where(db.fn('LOCATE', literal(sqlUtf8(word)), db.col('Product.' + field)), { [Op.gt]: 0 })) });
   }
   if (query.category_ids !== undefined) {
     const ids = uniqueIds(v.csv(query.category_ids, 'category_ids'), 'category_ids');
@@ -53,8 +58,7 @@ async function search(query) {
     if (!match) invalid('Filtro de opção inválido.');
     const optionId = v.id(match[1], 'option');
     const tests = v.csv(value, 'option', 20).map((item) =>
-      'FIND_IN_SET(CONVERT(0x' + Buffer.from(item, 'utf8').toString('hex') +
-      ' USING utf8mb4), po.' + db.getQueryInterface().quoteIdentifier('values') + ') > 0');
+      'FIND_IN_SET(' + sqlUtf8(item) + ', po.' + db.getQueryInterface().quoteIdentifier('values') + ') > 0');
     clauses.push(literal('EXISTS (SELECT 1 FROM product_options po WHERE po.product_id = Product.id AND po.id = ' +
       optionId + ' AND (' + tests.join(' OR ') + '))'));
   }
