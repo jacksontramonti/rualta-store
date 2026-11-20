@@ -1,0 +1,19 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-nova-root-local}
+      MYSQL_DATABASE: ${DB_NAME:-nova_sport}
+      MYSQL_USER: ${DB_USER:-nova_sport}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-troque-a-senha-local}
+    ports:
+      - "127.0.0.1:${DB_PORT:-3306}:3306"
+    volumes:
+      - nova_sport_db:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+volumes:
+  nova_sport_db:

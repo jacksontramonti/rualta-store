@@ -14,6 +14,14 @@ Loja conceito de calçados esportivos desenvolvida em **React 18 + Vite 6**, com
 
 > **Projeto educacional:** os produtos, preços, frete e avaliações são simulações. Este site não realiza pagamentos, entregas, autenticação, envio de newsletter ou emissão de pedidos.
 
+## Projeto Back-end
+
+A API REST da NOVA SPORT fica em [backend/](backend/). Ela inclui usuários,
+categorias e produtos, autenticação JWT, migrations MySQL e documentação Swagger.
+O front-end em React continua independente, usando o catálogo local.
+
+Veja [como configurar e testar o back-end](backend/README.md).
+
 ## Abrir no Visual Studio Code
 
 Requisitos: **Node.js 20.19+** e npm. No terminal, dentro da pasta do projeto:
